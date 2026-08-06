@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Een verrassing voor mijn prinses <3</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+  <h1>Welkom</h1>
+
+  <p>
+  Hier kan je alvast een kleine tip bekijken:
+  </p>
+
+  <a href="Kleine%20tip.pdf" target="_blank">
+      Bekijk de kleine tip
+  </a>
+
+  <p>Hier kan je de laatste tip bekijken.</p>
+
+  <a href="Laatste%20tip.pdf" target="_blank">
+      Aanschouw je laatste tip
+  </a>
+  <hr>
+  
+  <h2>De volledige verrassing</h2>
+  
+  <p id="bericht">
+  Het document wordt beschikbaar op 7 augustus om 00:00.
+  </p>
+  
+  <a id="muisje" href="muisje.pdf" target="_blank" style="display:none;">
+      Bekijk het volledige document
+  </a>
+  
+  <script>
+  
+  const vrijgave = new Date("2026-08-07T00:00:00");
+  
+  const nu = new Date();
+  
+  if (nu >= vrijgave) {
+  
+      document.getElementById("bericht").innerHTML =
+      "Het document is beschikbaar!";
+  
+      document.getElementById("muisje").style.display = "block";
+  
+  }
+  
+  </script>
+
+
+</body>
+</html>
